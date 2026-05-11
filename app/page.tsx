@@ -15,7 +15,26 @@ export default function Home() {
         {/* Soft yellow glow behind the image on the right */}
         <div className="absolute top-1/2 right-0 w-1/2 h-1/2 bg-[#eab308]/10 rounded-full blur-[120px] transform -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
+        {/* Premium Moving Flash / News Ticker */}
+        <div className="absolute top-0 left-0 right-0 z-30 bg-[#0a1526]/80 backdrop-blur-md border-b border-white/5 py-2 overflow-hidden flex items-center">
+          <div className="flex whitespace-nowrap animate-marquee hover:[animation-play-state:paused] text-[#eab308] text-xs sm:text-sm font-medium tracking-wider">
+            {Array.from({ length: 4 }).map((_, i) => (
+              <span key={i} className="flex items-center mx-4">
+                <span className="text-white/60 mr-2">OUR SERVICES:</span>
+                EPF Compliance <span className="mx-3 text-white/30">•</span> 
+                ESIC Compliance <span className="mx-3 text-white/30">•</span> 
+                GST Support <span className="mx-3 text-white/30">•</span> 
+                DSC Setup <span className="mx-3 text-white/30">•</span> 
+                Factories Act <span className="mx-3 text-white/30">•</span> 
+                Labour Law Advisory <span className="mx-3 text-white/30">•</span> 
+                HR Compliance <span className="mx-3 text-white/30">•</span> 
+                Licenses & Certificates
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
           <div className="flex flex-col items-center">
             
             {/* Content Centered */}

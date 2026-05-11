@@ -39,7 +39,7 @@ export default function Footer() {
               </a>
               <div className="flex items-start gap-3 text-sm">
                 <MapPin className="w-4 h-4 text-[#eab308] mt-1 shrink-0" />
-                <span>Indra Nagar, Sector 8-9/1059,<br />Lucknow</span>
+                <span>Indra Nagar, Sector 8/1059,<br />Lucknow</span>
               </div>
             </div>
           </div>

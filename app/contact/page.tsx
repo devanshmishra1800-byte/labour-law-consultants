@@ -62,7 +62,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-[#0a1526] mb-1">Office Address</h3>
                     <p className="text-slate-600">
-                      Indra Nagar, Sector 8-9/1059,<br />
+                      Indra Nagar, Sector 8/1059,<br />
                       Lucknow, Uttar Pradesh
                     </p>
                   </div>
