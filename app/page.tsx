@@ -9,18 +9,27 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative bg-[#0a1526] text-white pt-24 pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+      <section className="relative pt-24 pb-20 overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/hero.png"
+            alt="Triyodish Consultancy Office"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-[#0a1526]/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a1526]/60 via-transparent to-[#0a1526]/30 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+        </div>
         
-        {/* Soft yellow glow behind the image on the right */}
-        <div className="absolute top-1/2 right-0 w-1/2 h-1/2 bg-[#eab308]/10 rounded-full blur-[120px] transform -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
-
         {/* Premium Moving Flash / News Ticker */}
         <div className="absolute top-0 left-0 right-0 z-30 bg-[#0a1526]/80 backdrop-blur-md border-b border-white/5 py-2 overflow-hidden flex items-center">
           <div className="flex whitespace-nowrap animate-marquee hover:[animation-play-state:paused] text-[#eab308] text-xs sm:text-sm font-medium tracking-wider">
             {Array.from({ length: 4 }).map((_, i) => (
               <span key={i} className="flex items-center mx-4">
-                <span className="text-white/60 mr-2">OUR SERVICES:</span>
+                <span className="text-white/60 mr-2">COMPLIANCE SERVICES:</span>
                 EPF Compliance <span className="mx-3 text-white/30">•</span> 
                 ESIC Compliance <span className="mx-3 text-white/30">•</span> 
                 GST Support <span className="mx-3 text-white/30">•</span> 
@@ -34,7 +43,22 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+        {/* Top Trust Lines */}
+        <div className="absolute top-12 sm:static sm:top-auto left-0 right-0 z-20 w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2.5 sm:gap-4 sm:mt-10 lg:mt-12 sm:mb-20">
+          <div className="px-4 py-1.5 sm:px-5 sm:py-2 rounded-full bg-[#0a1526]/50 backdrop-blur-md border border-white/10 shadow-xl">
+            <span className="text-[9px] md:text-[12px] font-bold tracking-[0.25em] uppercase text-white drop-shadow-md">
+              Trusted by 500+ Businesses Across India
+            </span>
+          </div>
+          <div className="px-4 py-1.5 sm:px-5 sm:py-2 rounded-full bg-[#0a1526]/50 backdrop-blur-md border border-[#eab308]/20 shadow-xl">
+            <span className="relative overflow-hidden inline-block text-[9px] md:text-[12px] font-bold tracking-[0.2em] text-[#eab308] uppercase drop-shadow-md">
+              <span className="relative z-10">Our priority is your solution</span>
+              <span className="absolute top-0 -left-[150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 animate-[shimmer_3s_infinite_ease-in-out]"></span>
+            </span>
+          </div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 sm:mt-0 z-10 w-full">
           <div className="flex flex-col items-center">
             
             {/* Content Centered */}
@@ -42,33 +66,30 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="flex flex-col items-center text-center relative z-10"
+              className="flex flex-col items-center text-center relative z-10 w-full"
             >
-              <div className="mb-6">
-                <span className="text-sm md:text-base font-bold tracking-widest uppercase text-[#eab308]">Trusted by 500+ Businesses Across India</span>
-              </div>
-              
-              <h1 className="text-5xl md:text-6xl xl:text-7xl font-serif font-bold leading-[1.1] mb-6">
-                Stay Compliant. <span className="text-[#eab308]">Avoid Penalties.</span> Focus on Growth.
+              <h1 className="text-5xl md:text-6xl xl:text-8xl font-serif font-bold leading-[1.15] mb-4 text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.4)] tracking-tight">
+                Labour Law <span className="text-[#eab308]">Consultants</span>
               </h1>
               
-              <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
-                From registration to monthly filings and legal process support, we handle your statutory compliance — EPF, ESIC, GST, DSC, labour law, and more — so your business runs smoothly.
+              <p className="text-xl md:text-3xl text-gray-200 font-medium tracking-wide drop-shadow-md mb-12 max-w-2xl text-center leading-snug">
+                Stay Compliant. Avoid Penalties.<br />
+                Focus on Growth.
               </p>
               
-              <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-                <Link href="/inquiry" className="w-full sm:w-auto px-8 py-4 bg-[#eab308] text-[#0a1526] font-semibold rounded hover:bg-[#d97706] transition-colors flex items-center justify-center gap-2 text-lg">
+              <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-16">
+                <Link href="/inquiry" className="w-full sm:w-auto px-8 py-4 bg-[#eab308] text-[#0a1526] font-semibold rounded hover:bg-[#d97706] transition-colors flex items-center justify-center gap-2 text-lg shadow-lg">
                   Free Compliance Audit
                   <ArrowRight className="w-5 h-5" />
                 </Link>
-                <Link href="/contact" className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white font-semibold rounded hover:bg-white/20 transition-colors flex items-center justify-center gap-2 text-lg">
+                <Link href="/contact" className="w-full sm:w-auto px-8 py-4 bg-[#112240]/80 backdrop-blur-sm border border-white/10 text-white font-semibold rounded hover:bg-[#1a365d]/80 transition-colors flex items-center justify-center gap-2 text-lg shadow-sm">
                   Book Consultation
                 </Link>
               </div>
-              
-              <div className="mt-8">
-                <a href="https://wa.me/916387972500" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-                  <MessageCircle className="w-5 h-5" />
+
+              <div className="inline-block bg-black/40 backdrop-blur-sm px-6 py-3 rounded-full border border-white/10 shadow-lg">
+                <a href="https://wa.me/916387972500" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-gray-200 hover:text-white transition-colors font-medium">
+                  <MessageCircle className="w-5 h-5 text-[#25D366]" />
                   <span>WhatsApp Us for Quick Support</span>
                 </a>
               </div>

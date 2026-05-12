@@ -10,3 +10,7 @@
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+@keyframes shimmer {
+  100% { left: 100%; }
+}

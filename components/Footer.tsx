@@ -19,7 +19,9 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center">
-              <Image src="/logo.png" alt="Triyodish Logo" width={200} height={64} className="h-16 w-auto object-contain" />
+              <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full p-2.5 shadow-md border border-white/10 overflow-hidden">
+                <Image src="/logo.png" alt="Triyodish Logo" width={200} height={200} className="h-full w-full object-contain" />
+              </div>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed">
               Your trusted compliance partner for EPF, ESIC, GST, labour law, and statutory management across India.
@@ -39,7 +41,7 @@ export default function Footer() {
               </a>
               <div className="flex items-start gap-3 text-sm">
                 <MapPin className="w-4 h-4 text-[#eab308] mt-1 shrink-0" />
-                <span>Indra Nagar, Sector 8/1059,<br />Lucknow</span>
+                <span>Sector - 9, 9/1059 Indra Nagar,<br />Lucknow</span>
               </div>
             </div>
           </div>
@@ -79,7 +81,7 @@ export default function Footer() {
             <ul className="space-y-4 text-sm mb-8">
               <li className="flex justify-between">
                 <span>Monday – Saturday</span>
-                <span className="text-white font-medium">9:00 AM – 7:00 PM</span>
+                <span className="text-white font-medium">10:30 AM – 6:00 PM</span>
               </li>
               <li className="flex justify-between">
                 <span>Sunday</span>

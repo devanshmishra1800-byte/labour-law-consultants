@@ -62,7 +62,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-[#0a1526] mb-1">Office Address</h3>
                     <p className="text-slate-600">
-                      Indra Nagar, Sector 8/1059,<br />
+                      Sector - 9, 9/1059 Indra Nagar,<br />
                       Lucknow, Uttar Pradesh
                     </p>
                   </div>
@@ -74,7 +74,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#0a1526] mb-1">Business Hours</h3>
-                    <p className="text-slate-600">Monday - Saturday: 9am - 7pm<br />Sunday: By Appointment</p>
+                    <p className="text-slate-600">Monday - Saturday: 10:30 AM - 6:00 PM<br />Sunday: By Appointment</p>
                   </div>
                 </div>
               </div>

@@ -31,7 +31,9 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center w-auto lg:w-64">
              {/* Using next/image for optimized loading */}
-             <Image src="/logo.png" alt="Triyodish Logo" width={200} height={52} priority className="h-[52px] w-auto object-contain" />
+             <div className="flex items-center justify-center w-14 h-14 bg-white rounded-full p-2 shadow-md border border-white/10 overflow-hidden">
+               <Image src="/logo.png" alt="Triyodish Logo" width={200} height={200} priority className="h-full w-full object-contain" />
+             </div>
           </Link>
 
           {/* Desktop Nav */}
