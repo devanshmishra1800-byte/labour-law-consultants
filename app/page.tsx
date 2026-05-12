@@ -9,14 +9,14 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative pt-24 pb-20 overflow-hidden">
+      <section className="relative pt-24 pb-20 overflow-hidden bg-[#0a1526]">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/hero.png"
             alt="Triyodish Consultancy Office"
             fill
-            className="object-cover object-center"
+            className="object-contain sm:object-cover object-top sm:object-center"
             priority
           />
           <div className="absolute inset-0 bg-[#0a1526]/20"></div>
@@ -44,15 +44,15 @@ export default function Home() {
         </div>
 
         {/* Top Trust Lines */}
-        <div className="absolute top-12 sm:static sm:top-auto left-0 right-0 z-20 w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2.5 sm:gap-4 sm:mt-10 lg:mt-12 sm:mb-20">
-          <div className="px-4 py-1.5 sm:px-5 sm:py-2 rounded-full bg-[#0a1526]/50 backdrop-blur-md border border-white/10 shadow-xl">
-            <span className="text-[9px] md:text-[12px] font-bold tracking-[0.25em] uppercase text-white drop-shadow-md">
+        <div className="absolute top-[3.5rem] sm:static sm:top-auto left-0 right-0 z-20 w-full px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-row justify-between items-center gap-2 sm:gap-4 sm:mt-10 lg:mt-12 sm:mb-20">
+          <div className="px-2.5 py-1.5 sm:px-5 sm:py-2 rounded-full sm:rounded-full bg-[#0a1526]/60 backdrop-blur-md border border-white/10 shadow-xl max-w-[55%] sm:max-w-none text-center">
+            <span className="text-[8px] leading-[1.3] sm:text-[9px] md:text-[12px] font-bold tracking-[0.05em] sm:tracking-[0.25em] uppercase text-white drop-shadow-md block">
               Trusted by 500+ Businesses Across India
             </span>
           </div>
-          <div className="px-4 py-1.5 sm:px-5 sm:py-2 rounded-full bg-[#0a1526]/50 backdrop-blur-md border border-[#eab308]/20 shadow-xl">
-            <span className="relative overflow-hidden inline-block text-[9px] md:text-[12px] font-bold tracking-[0.2em] text-[#eab308] uppercase drop-shadow-md">
-              <span className="relative z-10">Our priority is your solution</span>
+          <div className="px-2.5 py-1.5 sm:px-5 sm:py-2 rounded-full sm:rounded-full bg-[#0a1526]/60 backdrop-blur-md border border-[#eab308]/20 shadow-xl max-w-[42%] sm:max-w-none text-center">
+            <span className="relative overflow-hidden inline-block text-[8px] leading-[1.3] sm:text-[9px] md:text-[12px] font-bold tracking-[0.05em] sm:tracking-[0.2em] text-[#eab308] uppercase drop-shadow-md">
+              <span className="relative z-10 block">Our priority is your solution</span>
               <span className="absolute top-0 -left-[150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 animate-[shimmer_3s_infinite_ease-in-out]"></span>
             </span>
           </div>
