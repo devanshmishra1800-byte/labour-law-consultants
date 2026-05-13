@@ -28,37 +28,23 @@ export default function Home() {
         <div className="absolute top-0 left-0 right-0 z-30 bg-[#0a1526]/80 backdrop-blur-md border-b border-white/5 py-2 overflow-hidden flex items-center">
           <div className="flex whitespace-nowrap animate-marquee hover:[animation-play-state:paused] text-[#eab308] text-xs sm:text-sm font-medium tracking-wider">
             {Array.from({ length: 4 }).map((_, i) => (
-              <span key={i} className="flex items-center mx-4">
-                <span className="text-white/60 mr-2">COMPLIANCE SERVICES:</span>
-                EPF Compliance <span className="mx-3 text-white/30">•</span> 
-                ESIC Compliance <span className="mx-3 text-white/30">•</span> 
-                GST Support <span className="mx-3 text-white/30">•</span> 
-                DSC Setup <span className="mx-3 text-white/30">•</span> 
-                Factories Act <span className="mx-3 text-white/30">•</span> 
-                Labour Law Advisory <span className="mx-3 text-white/30">•</span> 
-                HR Compliance <span className="mx-3 text-white/30">•</span> 
-                Licenses & Certificates
-              </span>
+               <span key={i} className="flex items-center mx-4">
+                 <span className="text-white/60 mr-3 shrink-0">COMPLIANCE SERVICES:</span>
+                 <span className="text-white font-bold tracking-widest uppercase mr-3">Trusted by 500+ Businesses Across India</span> <span className="mx-3 text-white/30">•</span>  
+                 EPF Compliance <span className="mx-3 text-white/30">•</span> 
+                 ESIC Compliance <span className="mx-3 text-white/30">•</span> 
+                 GST Support <span className="mx-3 text-white/30">•</span> 
+                 DSC Setup <span className="mx-3 text-white/30">•</span> 
+                 Factories Act <span className="mx-3 text-white/30">•</span> 
+                 Labour Law Advisory <span className="mx-3 text-white/30">•</span> 
+                 HR Compliance <span className="mx-3 text-white/30">•</span> 
+                 Licenses & Certificates
+               </span>
             ))}
           </div>
         </div>
 
-        {/* Top Trust Lines */}
-        <div className="absolute top-[3.5rem] sm:static sm:top-auto left-0 right-0 z-20 w-full px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-row justify-between items-center gap-2 sm:gap-4 sm:mt-10 lg:mt-12 sm:mb-20">
-          <div className="px-2.5 py-1.5 sm:px-5 sm:py-2 rounded-full sm:rounded-full bg-[#0a1526]/60 backdrop-blur-md border border-white/10 shadow-xl max-w-[55%] sm:max-w-none text-center">
-            <span className="text-[8px] leading-[1.3] sm:text-[9px] md:text-[12px] font-bold tracking-[0.05em] sm:tracking-[0.25em] uppercase text-white drop-shadow-md block">
-              Trusted by 500+ Businesses Across India
-            </span>
-          </div>
-          <div className="px-2.5 py-1.5 sm:px-5 sm:py-2 rounded-full sm:rounded-full bg-[#0a1526]/60 backdrop-blur-md border border-[#eab308]/20 shadow-xl max-w-[42%] sm:max-w-none text-center">
-            <span className="relative overflow-hidden inline-block text-[8px] leading-[1.3] sm:text-[9px] md:text-[12px] font-bold tracking-[0.05em] sm:tracking-[0.2em] text-[#eab308] uppercase drop-shadow-md">
-              <span className="relative z-10 block">Our priority is your solution</span>
-              <span className="absolute top-0 -left-[150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 animate-[shimmer_3s_infinite_ease-in-out]"></span>
-            </span>
-          </div>
-        </div>
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 sm:mt-0 z-10 w-full">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 sm:mt-32 z-10 w-full mb-12 sm:mb-20">
           <div className="flex flex-col items-center">
             
             {/* Content Centered */}
@@ -68,14 +54,10 @@ export default function Home() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="flex flex-col items-center text-center relative z-10 w-full"
             >
-              <h1 className="text-5xl md:text-6xl xl:text-8xl font-serif font-bold leading-[1.15] mb-4 text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.4)] tracking-tight">
-                Labour Law <span className="text-[#eab308]">Consultants</span>
-              </h1>
-              
-              <p className="text-xl md:text-3xl text-gray-200 font-medium tracking-wide drop-shadow-md mb-12 max-w-2xl text-center leading-snug">
+              <h1 className="text-4xl md:text-5xl xl:text-6xl text-white font-serif font-bold tracking-wide drop-shadow-md mb-12 max-w-2xl text-center leading-[1.25]">
                 Stay Compliant. Avoid Penalties.<br />
-                Focus on Growth.
-              </p>
+                <span className="text-[#eab308]">Focus on Growth.</span>
+              </h1>
               
               <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-16">
                 <Link href="/inquiry" className="w-full sm:w-auto px-8 py-4 bg-[#eab308] text-[#0a1526] font-semibold rounded hover:bg-[#d97706] transition-colors flex items-center justify-center gap-2 text-lg shadow-lg">

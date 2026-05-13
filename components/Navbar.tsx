@@ -29,10 +29,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center w-auto lg:w-64">
-             {/* Using next/image for optimized loading */}
-             <div className="flex items-center justify-center w-14 h-14 bg-white rounded-full p-2 shadow-md border border-white/10 overflow-hidden">
-               <Image src="/logo.png" alt="Triyodish Logo" width={200} height={200} priority className="h-full w-full object-contain" />
+          <Link href="/" className="flex items-center w-auto lg:w-max shrink-0">
+             <div className="flex items-center gap-3">
+               <div className="flex items-center justify-center w-12 h-12 lg:w-14 lg:h-14 bg-white rounded-full p-2 shadow-md border border-white/10 overflow-hidden shrink-0">
+                 <Image src="/logo.png" alt="Triyodish Logo" width={200} height={200} priority className="h-full w-full object-contain" />
+               </div>
+               <div className="flex flex-col">
+                 <span className="text-white font-serif font-bold text-lg lg:text-xl tracking-wide leading-tight">Labour Law</span>
+                 <span className="text-[#eab308] font-serif font-bold text-sm lg:text-base tracking-widest uppercase leading-tight">Consultants</span>
+               </div>
              </div>
           </Link>
 
